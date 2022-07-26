@@ -1,0 +1,25 @@
+package com.ejercicio;
+
+public class Tarea1 {
+    public static void main(String[] args) {
+
+        byte variableByte = 0;
+        int entero = 10;
+        long l = 100000000;
+        float flotante = 0.0f;
+        char caracter = 'a';
+        boolean boleano = true;
+        String cadena = "Cadena de texto";
+
+        System.out.println("byte " + variableByte);
+        System.out.println("entero " + entero);
+        System.out.println("long " + l);
+        System.out.println("flotante " + flotante);
+        System.out.println("caracter " + caracter);
+        System.out.println("boolean " + boleano);
+        System.out.println(cadena);
+
+
+    }
+
+}
