@@ -1,0 +1,10 @@
+public class Funciones {
+    public static void main(String[] args) {
+    String[] nombres = {"Lucas", "Roberto", "Pepe"};
+
+
+    for (String nombre : nombres) {
+        System.out.print(nombre + " ");
+    }
+    }
+}
