@@ -1,1 +1,88 @@
+package practice;
+
+public class SmartMain {
+    public static void main(String[] args) {
+
+        SmartDevice smartDevice = new SmartDevice("nombre", "5000mAh", "500 euros");
+        SmartPhone smartPhone = new SmartPhone("iPhone 13", "3000mAh", "1000 euros", "128gb", "Full HD");
+        SmartWatch smartWatch = new SmartWatch("Smartwatch 7", "200mAh", "50 euros", "200gr");
+
+        System.out.println(smartDevice.toString());
+        System.out.println(smartPhone);
+        System.out.println(smartWatch);
+
+
+
+    }
+}
+
+public class SmartDevice {
+    String name, batery, price;
+
+    public SmartDevice(){
+
+    }
+
+    public SmartDevice(String name, String batery, String price) {
+        this.name = name;
+        this.batery = batery;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "SmartDevice{" +
+                "name='" + name + '\'' +
+                ", batery='" + batery + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+}
+
+public class SmartPhone extends SmartDevice{
+    String memory, screen;
+
+    public SmartPhone(){
+
+    }
+
+    public SmartPhone(String name, String batery, String price, String memory, String screen) {
+        super(name, batery, price);
+        this.memory = memory;
+        this.screen = screen;
+    }
+
+    @Override
+    public String toString() {
+        return "SmartPhone{" +
+                "memory='" + memory + '\'' +
+                ", screen='" + screen + '\'' +
+                ", name='" + name + '\'' +
+                ", batery='" + batery + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+}
+public class SmartWatch extends SmartDevice{
+    String weight;
+
+    public SmartWatch(){
+
+    }
+
+    public SmartWatch(String name, String batery, String price, String weight) {
+        super(name, batery, price);
+        this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "SmartWatch{" +
+                "weight='" + weight + '\'' +
+                ", name='" + name + '\'' +
+                ", batery='" + batery + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+}
 
