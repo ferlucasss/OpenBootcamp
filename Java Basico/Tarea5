@@ -1,0 +1,58 @@
+package poo.clases;
+
+import poo.interfaces.CocheCRUD;
+
+import java.io.File;
+
+public class Main {
+
+    public static void main(String[] args) {
+        CocheCRUD coche = new CocheCRUDImpl("Audi", "A4");
+
+        coche.save(new CocheCRUDImpl("lucast","as"));
+        coche.findAll();
+        coche.delete(new CocheCRUDImpl("", ""));
+
+
+    }
+}
+
+import poo.clases.CocheCRUDImpl;
+
+public interface CocheCRUD {
+
+    void save(CocheCRUDImpl coche);
+
+    void findAll();
+
+    void delete(CocheCRUDImpl coche);
+
+}
+
+import poo.interfaces.CocheCRUD;
+
+public class CocheCRUDImpl implements CocheCRUD {
+
+    String marca, modelo, kilometros;
+
+    public CocheCRUDImpl(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+
+    @Override
+    public void save(CocheCRUDImpl coche) {
+        System.out.println("Metodo save");
+    }
+
+    @Override
+    public void findAll() {
+        System.out.println("Metodo findAll");;
+    }
+
+    @Override
+    public void delete(CocheCRUDImpl coche) {
+        System.out.println("Metodo delete");
+    }
+}
